@@ -1,5 +1,7 @@
 # Dictionary
 
+[Skiena](https://www.youtube.com/watch?v=2YcHOsrPLKE&list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b&index=5)
+
 ## Dictionary / Dynamic set operations
 
 - Perhaps the most important class of Data-Structures | maintain set of items, indexed by keys
@@ -51,6 +53,46 @@
 
 ### _Implementing Binary search tree_
 
-- def Node {Node *parent, Node *left, Node *right}
-  - _Parent ptr is optional as while traversing a tree, the ptr can be put on stack to preserve the search order and a way to trace back_
-- __
+- def Node {Node *parent, Node *left, Node \*right}
+  - _Parent `ptr` is optional as, while traversing the `tree`, the `ptr` can be put on `stack` to **preserve the search order** and a way to trace back_
+
+> **Note: Binary Search tree - Recursive structure**
+
+- `Recursive Structure` - `if you make it smaller it is still of that type`
+
+  - _Examples - Lists, Binary Search Tree_
+
+- `Search time - BST` **proportional to** height of the tree `h`  (= depends on the BST =>  )
+  - ***`O(h)`*** `(_think mR. anderson oO/<<!_)`
+
+### Maximum and Minimum - BST
+
+- _Left most element - Minimum_ ***`O(h)`***
+- _Right most element - Maximum_ ***`O(h)`***
+
+> NOTE: ***WORST CASE SCENARIOS - `BALANCED BST` Search Time = `O(log N)`***
+
+### Where is Predecessor / Successor of a Node with a Key value `k` ?
+
+- `Predecessor` - is the `maximum value` in the `left sub-tree`
+- `Successor` - is the `minimum value` in the `right sub-tree` - `(_think mR. anderson oO/<<!_)`
+
+### Where is the Predecessor : Leaf Node?
+
+- if it ***doesn't*** have a `left child` then --- ? --- ***`predecessor is its first left ancestor`*** >> **`(_think mR. anderson oO/<<!_)`**
+  - _the first RIGHT turning point before you reach the given node_
+  - _Predecessor of the Minimum is `NULL`_
+  - _`O(h)`_
+
+### Tree Insertion
+
+- _Insertion time - `O(h)`_
+- _Do a Binary Search to find where the element should be and replace the termination `NULL` with the `new Node`_
+- _For duplicate keys - we can have list as a Node_
+- _BST - don't allow equality_
+
+### Tree Deletion
+
+- _Case 1 - where the Node is a leaf; just NULL out the Parent-child pointer_
+- _Case 2 - where a Node has just one child; the doomed node can be just cut out_
+- _Case 3 - where a Node has both the sub-trees; find the `Successor` by the definition above; re-label the Node with the  `Successor`; Delete the `Successor` Node_ `(_think mR. anderson oO/<<!_)` ***`O(h)`***
