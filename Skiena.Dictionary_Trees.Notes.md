@@ -30,7 +30,7 @@
 
 > Note: It takes linear time to do in-order traversal in a BST
 
-### Hash Tables - Implementation of Dictionaries
+### **Hash Tables - Implementing Dictionaries**
 
 > ***`The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function`***
 
@@ -55,6 +55,20 @@
 - If the `keys` are uniformly distributed then each bucket should contain very few `keys` or Collisions
 - `These BUCKETS` are short lists then and can be easily searched
 - _A GOOD HASH FUNCTION SCATTER THINGS AROUND RANDOMLY_
-- _ _
 
+#### Performance on Set Operations
 
+- with either chaining (Linked-Lists) or OpenAddressing
+  - _Search - `O(1)` expected, `O(n)` worst case_
+  - _Insert - `O(1)` expected, `O(n)` worst case_
+  - _Delete - `O(1)` expected, `O(n)` worst case_
+  - Min, Max and Predecessor, Successor  `O(n + m)` expected and worst case
+    - _n is no of elements and m is the number of buckets_
+    - There is no way to tell where and in which specific bucket lies the Minimum or Maximum or Successor
+    - Good hash function uniformly distributes
+  
+  > _The best worst case bounds of Dictionary Implementations come from Balanced-BinarySearchTree_
+
+  - [Hashing function usages](https://youtu.be/Juv4AsnnqMA?list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b&t=4473)
+    - _Is this new document different from the rest in a large corpus_
+    - _How can i convince you that file hasn't changed_
