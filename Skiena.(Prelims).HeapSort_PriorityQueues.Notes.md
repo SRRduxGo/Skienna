@@ -1,4 +1,4 @@
-# [Heap-Sort / Priority Queues](https://youtu.be/ute-pmMkyuk?list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b)
+# [Heap-Sort / Priority Queues _(prelim)_](https://youtu.be/ute-pmMkyuk?list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b)
 
 > ***think about `log Nˆ2` and `logˆ2 N` or `(log N)ˆ2` and `log log N or log (log N)`***
 
