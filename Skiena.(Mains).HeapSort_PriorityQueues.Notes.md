@@ -73,7 +73,7 @@
 - Faster Way to build a `Heap`
   - _Using Heapify to construct Heap_
   - _An isolated element forms a Heap of Size 1_
-  - __
+  - _Array Implementation given below_
   
   ```js
     HeapSort(A)
