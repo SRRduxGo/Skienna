@@ -116,5 +116,30 @@
 
 ### Worst Case for QuickSort
 
-- 
+- _If we pick up the `Biggest` or the `Smallest` element as the `Pivot` that means one `partition` has  `zero` elements_
+- _And at every step we do pick up a `Pivot` like this then_
+  - _`Number of Levels` = `N`_
+  > ***Why number of levels = N***
+  - _`Time taken(Complexity) at each level` = `O(N)`_
+  - _Hence total time complexity = `N * O(N)` = ***`O(Nˆ2)`***_
+
+### Intuition: [The Average case for Quicksort](https://youtu.be/q7K9otnzlfE?list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b&t=4508) ..TRICKY !!
+
+- If we pick the `Pivot` element  at random
+  - _half the time the `Pivot` element will be from the `center half` of the sorted Array_
+  - _whenever the `Pivot` element is from the position `1/4 . N` to `3/4 . N` (**of the sorted Array - eventually**), the larger remaining sub- array contains  at most `3/4 . N` elements_
+  - _if we assume the `Pivot` is always in this range- the worst possible good `Pivot`, ***the `Partition-Tree` height ( where `Pivot` is always `1/4 . N`th element -)***,  we need to get from `N` elements down to `1` element while choosing the biggest chunk - `(3/4.N)`- of the Array each time_
+    - _And this `branch` of the tree will be the longest and practically can be considered as the `tree Height`_
+    - _`(3/4)ˆl . N = 1`⤇ `N` = `(4/3)ˆl`_
+    - _`Log N` = `l . Log(4/3)` or `Log`<sub>`4/3`</sub>`N` = `l`_
+    > _OR_
+    - _`l` = `1/Log(4/3) . Log N < 2 Log N`_
+    >TODO: Convert Log(base 2) to Log(base 4)? what does it really mean?
+- _In practice to reach the leaf node - there would be equal number of `good pivots` and `bad pivots`_
+- _Since Any number ranked between `N/4` and `3N/4` would make a decent `Pivot`, we get one half the time on average_
+- _if we need `2 Log N`  levels of `Decent` partitions  to finish the JOB, and half of `Random` partitions are decent_
+  - _As the worst partition `Pivot` will lead one partition of zero length_
+- _then on `Average` the recursion tree to `Quicksort` the `Array` has `≈ 4 Log N` levels_ 
+  > **think why oO/!**
+
 
